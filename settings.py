@@ -85,3 +85,8 @@ LOGGING = {
     }
 }
 
+try:
+    from local_setting import *
+except:
+    pass
+
