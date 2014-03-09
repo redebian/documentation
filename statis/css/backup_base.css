@@ -1,0 +1,140 @@
+body{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 44%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(44%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 44%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 44%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 44%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 44%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
+	margin:0px;
+	padding:0px;
+}
+
+#wrapper{
+	margin:0px;
+	padding:0px;
+	width: 1348px;
+	height: auto;
+	
+}
+
+#header{
+	height: 75px;
+	width: 1346px;
+	margin-top:0px;
+	padding-top:0px;
+	
+}
+
+#content{
+	height: auto;
+	width: 950px;
+	margin-top:0px;
+	padding-top:0px;
+	margin-left:auto;
+	margin-right:auto;;
+	
+}
+
+#footer{
+	font-size:0.6em;
+	width: 1348px;
+	height: 50px;
+	
+}
+
+#for-lable{
+	float:left;
+	padding-top:28px;
+	padding-left:200px;
+}
+
+#for-navigation{
+	float: right;
+	padding-top:25px;
+	padding-right:200px;
+}
+
+#navigation {
+	float: right;
+	list-style: none;
+	list-style-type: none;
+	list-style-position: initial;
+	list-style-image: initial;
+}
+
+#navigation li {
+	float: left;
+	margin-left: 1em;
+}
+
+#navigation li a {
+	color: #333;
+	padding-right: 0.5em;
+	padding-bottom: 0px;
+	padding-left: 0.5em;
+	display: block;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.lable{
+	font-size:2.2em;
+}
+
+.content-kiri{
+	float: left;
+	background: #ffffff;
+	height:900px;
+	width:275px;
+}
+
+#image img{
+	margin-right:37px;
+	margin-left:37px;
+	margin-top:37px;
+	width:200;
+	height:300;
+}
+
+.content-kanan{
+	float: right;
+	background-color: #ffffff;
+	height:auto;
+	width:672px;
+}
+
+.content-kiri label{
+	margin-top: 15px;
+	margin-left: 50px;
+	float: left;
+	font-family: "Century Schoolbook L";
+}
+
+#page-body{
+	width: 630px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 25px;
+}
+
+#page-body p{
+	text-align: justify;
+	font-size:0.9em;
+}
+
+.datecoment{
+	font-size:12px;
+	color: #0C7B85;
+}
+
+.block-coment{
+	-webkit-box-shadow: 5px 5px 5px 5px rgba(5, 5, 5, 1);
+	box-shadow: 5px 5px 5px 5px rgba(5, 5, 5, 1);
+	margin-bottom: 20px;
+}
+
+.user-coments{
+	background-color: gray;
+}

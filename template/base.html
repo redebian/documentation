@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>redebian-documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="redebian tutorial, weblog tutorial">
+    <meta name="author" content="rezki gustian">
+
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="/statis/css/bootstrap.css" rel="stylesheet">
+    <link href="/statis/css/base.css" rel="stylesheet">
+    <link href="/statis/css/menu.css" rel="stylesheet">
+    {% block extra_css %}{% endblock %}
+  </head>
+
+  <body>
+    {% load truncate_filter %}
+    <div class="container">
+        <div class="row bar-menu">
+            <div class="col-md-8">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="menu_tab" href="#" style="color:white;">Redebian Weblog</a></li>
+                    <li>
+                        <a class="menu_tab" style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Programming
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>Python</li>
+                            <li>PHP</li>
+                            <li>C</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu_tab" style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Servers
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>Web Servers</li>
+                            <li>DNS Servers</li>
+                            <li>Database Servers</li>
+                            <li>Proxy Servers</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu_tab" style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Framework 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>Django</li>
+                            <li>CodeIgniter</li>
+                            <li>Yii</li>
+                        </ul>
+                    </li>
+                    <li><a class="menu_tab" style="color:white;" href="#">Others</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+               <form style="text-align:center; margin-top:5px;">
+                <input type="text" class="form-control" style="width:85%; padding:2px;" placeholder="Search">
+               </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                {% block content %}
+                
+                {% endblock %}
+            </div>
+
+            <div class="col-md-3" style="padding:10px 10px 10px 20px; border:1px solid #c0c0c0;">
+                <div class="row">
+                    <div class="col-md-12">Categories</div>
+                    <div class="col-md-12">
+                        {% categories 'category' %}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">New</div>
+                    <div class="col-md-12">
+                        {% new 'tutor' %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Popular</div>
+                    <div class="col-md-12">
+                        <ul>
+                            <li>Popular 1</li>
+                            <li>Popular 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">Blogrol</div>
+                    <div class="col-md-12">
+                        {% blogrol 'web' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="border:1px solid green;">footer</div>
+    </div>
+    {% block js %}
+        <script src="/statis/js/jquery-1.7.min.js"></script>
+        <script src="/statis/js/bootstrap.min.js"></script>
+
+        <script>
+            $("li .menu_tab").click(function () {
+              $(".active").removeClass("active");
+              $(this).addClass("active");
+            });
+        </script>
+
+    {% endblock %}
+  </body>
+</html>

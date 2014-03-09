@@ -1,0 +1,5 @@
+<ul>
+{% for data in category %}
+    <li><a href="{% url category pk=data.id %}">{{data.categori}}</a></li>      
+{% endfor %}
+</ul>

@@ -1,0 +1,5 @@
+<ul>
+	{% for data in new %}
+	    <li><a href="{% url detail pk=data.id %}%">{{data.title}}</a></li>
+    {% endfor %}
+</ul>

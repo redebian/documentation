@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+
+{% block css %}
+	<link rel="stylesheet" href="/statis/css/form.css">
+	<link rel="stylesheet" href="/statis/css/base.css">
+{% endblock %}
+
+{% block body %}
+<div id="page-body">
+<div id="page-title">
+	<h2>Contact Me</h2>
+</div>
+	<form action="." method="POST">
+		<div class="fieldWrapper">
+			<label id="id_subject">
+				Name:
+			</label>
+			{{ contact.name }}
+			{% if contact.name.errors %}
+				{% for error in contact.name.errors %}
+					<span class="error">{{ error|escape }}</span>
+				{% endfor %}
+			{% endif %}
+		</div>
+		 <div class="fieldWrapper">
+			<label id="id_subject">
+				Email-address:
+			</label>
+			{{ contact.email }}
+			{% if contact.email.errors %}
+				{% for error in contact.email.errors %}
+					<span class="error">{{ error|escape }}</span>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="fieldWrapper">
+			<label id="id_subject">
+				Message:
+			</label>
+			{{ contact.message }}
+			{% if contact.message.errors %}
+				{% for error in contact.message.errors %}
+					<span class="error">{{ error|escape }}</span>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="fieldWrapper">
+			<button class="nextButton">Submit</button>
+		</div>
+	</form>
+	{% if display %}
+		{% for e in isicontact %}
+			{{e.nama}}<br>{{e.message}}
+		{% endfor %}
+	{% endif %}
+</div>
+{% endblock %}

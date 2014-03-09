@@ -1,0 +1,108 @@
+.sembunyi{
+	display: none;
+}
+
+/* css for comment */
+
+h2{
+	font-size: 1.5em;
+	line-height: 1.5em;
+	color: #333;
+	margin-bottom: .5em;
+}
+
+.form-section{
+	clear: both;
+	overflow: auto;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+.fieldWrapper{
+	padding: .25em .8em .5em .5em;
+padding-top: 0.25em;
+padding-right: 0.8em;
+padding-bottom: 0.5em;
+padding-left: 0.5em;
+overflow: hidden;
+overflow-x: hidden;
+overflow-y: hidden;
+margin-bottom: 3px;
+border: 1px solid transparent;
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-color: transparent;
+border-right-color: transparent;
+border-bottom-color: transparent;
+border-left-color: transparent;
+float: left;
+clear: both;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+#id_subject{
+	display: block;
+font-size: .8em;
+font-weight: bold;
+}
+
+.note{
+	color:red;
+}
+
+input, textarea {
+	font-family: Arial;
+font-size: .8em;
+padding: 3px .35em;
+padding-top: 3px;
+padding-right: 0.35em;
+padding-bottom: 3px;
+padding-left: 0.35em;
+background: #EEE url('/images/jformer/input-bg.gif') repeat-x 0 1px scroll;
+background-image: url(http://www.jformer.com/images/jformer/input-bg.gif);
+background-repeat-x: repeat;
+background-repeat-y: no-repeat;
+background-attachment: scroll;
+background-position-x: 0px;
+background-position-y: 1px;
+background-origin: initial;
+background-clip: initial;
+background-color: #EEE;
+border: 1px solid #AAA;
+border-top-width: 1px;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-color: #AAA;
+border-right-color: #AAA;
+border-bottom-color: #AAA;
+border-left-color: #AAA;
+}
+
+.error{
+	color:red;
+}
+
+.content-kanan p{
+	/*width: 670px;*/
+	width:630px;
+	margin-right:19px;
+	margin-left:19px;
+	/*border: 1px solid red;*/
+	text-align: justify;
+}

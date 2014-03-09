@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load truncate_filter %}
+
+{% block content %}
+ {% for e in tutor %}
+ 	<div class="row" style="padding:10px 0 10px 0;">
+ 		<div class="col-md-12" style="border-bottom:1px solid #c0c0c0;">
+ 			<div class="row">
+ 				<div class="col-md-12">
+                    <b>{{e.title}}</b>
+                </div>
+ 			</div>
+ 			<div class="row">
+                <div class="col-md-12" style="padding:5px;">
+                    {% autoescape off %} {{e.isi|truncate_chars:50}} {% endautoescape %}
+                </div>
+            </div>
+ 		</div>
+ 	</div>
+ {% endfor %}
+
+{% endblock %}

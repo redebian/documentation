@@ -1,0 +1,22 @@
+#id_name{
+	width: 60%;
+}
+
+#id_email{
+	width: 60%;
+}
+
+#id_website{
+	width: 60%;
+}
+
+#id_coment{
+	width: 600px;
+}
+
+
+textarea {
+    width:376px;
+    padding: 0;
+    border: 1px solid #ccc;
+    }

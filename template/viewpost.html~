@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+	{% for e in viewposti %}{% csrf_token %}
+	<div class="page-header">
+		<h1>{{e.title}}</h1>
+	</div>
+	<div class="span8">
+		{% autoescape off %}{{e.isi}}{% endautoescape %}
+	</div>
+	<hr>
+	<div class="span8">
+	<legend>Response to "{{e.title}}"</legend>
+	{% for i in coments %}
+		<label>{{e.name}}</label>
+	{% endfor %}
+	</div>
+	<div class="span8">
+		<form class="form-horizontal" action="." method="POST">
+		  	<fieldset>
+			    	<legend>Leave a Comment</legend>
+			    	<div class="control-group">
+			      		<label class="control-label" for="input01">Name</label>
+			      		<div class="controls">
+						{{ coment_form.name }}
+					        {% if coment_form.name.errors %}
+							{% for error in coment_form.name.errors %}
+								<span class="error">{{ error|escape }}</span>
+							{% endfor %}
+						{% endif %}
+			      		</div>
+			    	</div>
+				<div class="control-group">
+			      		<label class="control-label" for="input01">Email</label>
+			      		<div class="controls">
+						{{ coment_form.email }}
+					        {% if coment_form.email.errors %}
+							{% for error in coment_form.email.errors %}
+								<span class="error">{{ error|escape }}</span>
+							{% endfor %}
+						{% endif %}
+			      		</div>
+			    	</div>
+				<div class="control-group">
+			      		<label class="control-label" for="input01">Website</label>
+			      		<div class="controls">
+						{{ coment_form.website }}
+					        {% if coment_form.website.errors %}
+							{% for error in coment_form.website.errors %}
+								<span class="error">{{ error|escape }}</span>
+							{% endfor %}
+						{% endif %}
+			      		</div>
+			    	</div>
+				<div class="control-group">
+			      		<label class="control-label" for="input01">Coment</label>
+			      		<div class="controls">
+						<textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+			      		</div>
+			    	</div>
+				<div class="control-group">
+			      		<button class="btn btn-primary" href="#" type="submit">Submit</button>
+			    	</div>
+		  	</fieldset>
+		</form>
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}

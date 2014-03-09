@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+
+{% block body %}
+	<b>source field from appengine database</b><br>
+	{% for e in contact %}
+		{{e.nama}}<br>
+	{% endfor %}
+{% endblock %}
