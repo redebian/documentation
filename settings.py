@@ -11,7 +11,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-
 TIME_ZONE = ''
 LANGUAGE_CODE = 'en-us'
 
@@ -29,7 +28,7 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-SECRET_KEY = '3k@8+okfahlj2fy3hqjx$q9^i&_$-r$-bk)i1vh*)yt+k8e@nf'
+SECRET_KEY = ''
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
