@@ -14,7 +14,7 @@ from google.appengine.api import users
 from google.appengine.api import mail
 
 from portal.models import *
-from portal.form import *
+from portal.form import CommentForm
 
 import datetime
 from datetime import datetime
@@ -55,19 +55,23 @@ class ListTutorial(BaseAppListView):
         return context
 
 
-class ViewPost(BaseAppListView):
+from django.views.generic.edit import FormView
+class ViewPost(FormView):
 
     model = Tutorial
     template_name = "viewpost.html"
+    form_class = CommentForm
+    success_url = '/thanks/'
+
+    def form_valid(self, form):
+
+        form.send_email()
+        return super(ContactView, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
 
         context = super(ViewPost, self).get_context_data(**kwargs)
-
         context['query'] = Tutorial.objects.filter(id=int(self.kwargs['pk']))
-        context['coments'] = Comment.objects.filter(tutorial = int(self.kwargs['pk']))
-        context['coment_form'] = CommentForm()
-
         return context
 
 class CategoryList(BaseAppListView):
