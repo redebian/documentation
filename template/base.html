@@ -30,9 +30,9 @@
         <div class="row bar-menu">
             <div class="col-md-8">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a class="menu_tab" href="/" style="color:white;">Redebian Weblog</a></li>
+                    <li class="active"><a class="menu_tab" href="/" style="color:#ffe761;">Redebian Weblog</a></li>
                     <li>
-                        <a class="menu_tab" style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <a class="menu_tab" style="color:#ffe761;" class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Programming
                         </a>
                         <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="menu_tab" style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <a class="menu_tab" style="color:#ffe761;" class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Servers
                         </a>
                         <ul class="dropdown-menu">
@@ -53,7 +53,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="menu_tab" style="color:white;" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <a class="menu_tab" style="color:#ffe761;" class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Framework 
                         </a>
                         <ul class="dropdown-menu">
@@ -62,7 +62,7 @@
                             <li>Yii</li>
                         </ul>
                     </li>
-                    <li><a class="menu_tab" style="color:white;" href="#">Others</a></li>
+                    <li><a class="menu_tab" style="color:#ffe761;" href="#">Others</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
@@ -72,28 +72,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9" style="background-color:#fff;">
                 {% block content %}
                 
                 {% endblock %}
             </div>
 
-            <div class="col-md-3" style="padding:10px 10px 10px 20px; border:1px solid #c0c0c0;">
+            <div class="col-md-3" style="padding:10px 10px 10px 20px; border:1px solid #c0c0c0; background-color:#234f32;">
                 <div class="row">
-                    <div class="col-md-12">Categories</div>
+                    <div class="col-md-12"><h3>Categories</h3></div>
                     <div class="col-md-12">
                         {% categories 'category' %}
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">New</div>
+                    <div class="col-md-12"><h3>New</h3></div>
                     <div class="col-md-12">
                         {% new 'tutor' %}
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">Popular</div>
+                    <div class="col-md-12"><h3>Popular<h3></div>
                     <div class="col-md-12">
                         <ul>
                             <li>Popular 1</li>
@@ -102,14 +102,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">Blogrol</div>
+                    <div class="col-md-12"><h3>Blogrol</h3></div>
                     <div class="col-md-12">
                         {% blogrol 'web' %}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row" style="border:1px solid green;">footer</div>
+        <div class="row" style="border:1px solid green;">
+            <div class="col-md-12" style="background-color:#487858">
+                &copy; redebian - web developer | all rights reserved
+            </div>
+        </div>
     </div>
     {% block js %}
         <script src="/statis/js/jquery-1.7.min.js"></script>
